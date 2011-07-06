@@ -10,6 +10,7 @@ module Faker
       def last_name;  fetch('name.last_name'); end
       def prefix;     fetch('name.prefix'); end
       def suffix;     fetch('name.suffix'); end
+      def avatar_url; fetch('name.avatar_url'); end
       
     end
   end

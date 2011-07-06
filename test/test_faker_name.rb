@@ -1,4 +1,5 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
+require 'uri'
 
 class TestFakerName < Test::Unit::TestCase
 
@@ -16,5 +17,9 @@ class TestFakerName < Test::Unit::TestCase
   
   def test_suffix
     assert @tester.suffix.match(/[A-Z][a-z]*\.?/)
+  end
+
+  def test_avatar_url
+    assert_match URI.regexp, @tester.avatar_url
   end
 end
